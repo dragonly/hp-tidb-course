@@ -124,7 +124,7 @@ type TxnState struct {
 
 其实一开始这段注释对我而言没有太多信息量，在我认真翻看 PingCAP 博客系列文章后发现，才基本就理解这里啥意思。先贴一张从 [TiKV 源码解析系列文章（十二）分布式事务](https://pingcap.com/blog-cn/tikv-source-code-reading-12/)一文中借来的图，说明一下一次分布式事务大致流程。
 
-![image](../../static/hptidb-hello-transaction/transaction-flow.png)
+![image](img/transaction-flow.png)
 [<center><small>from https://pingcap.com/blog-cn/tikv-source-code-reading-12/</small></center>](https://pingcap.com/blog-cn/tikv-source-code-reading-12/#%E4%BA%8B%E5%8A%A1%E7%9A%84%E6%B5%81%E7%A8%8B)
 
 其实 TiDB 中的分布式事务主要由 TiKV 中基于 percolator 模型实现，所以上面这段注释现在再看一下，有几个点：
